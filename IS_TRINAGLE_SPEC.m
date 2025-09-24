@@ -1,0 +1,3 @@
+function ist = IS_TRINAGLE_SPEC(a,b,c)
+ist = TEST_OF_A(a,b,c) & TEST_OF_A(b,a,c)...
+    & TEST_OF_A(b,c,a)

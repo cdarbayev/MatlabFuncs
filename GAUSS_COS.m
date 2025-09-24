@@ -1,0 +1,12 @@
+function[t, f]=GAUSS_COS(A,sigma,omega,phi,T,dt)
+t = -T:dt:+T;
+f =A*exp(-t.^2/2/sigma^2).*cos(omega*t+phi);
+if nargout == 0
+    plot(t, f,'k-')
+    axis([-T,+T,-1.1*A,1.1*A])
+    grid on
+    xlabel('\it t', 'FontName', 'Times')
+    ylabel('\it f', 'FontName', 'Times')
+end
+GAUSS_COS(1,1,6,0,5,1e-5);
+print('KMITAM.EPS','-deps')
